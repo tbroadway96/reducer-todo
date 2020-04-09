@@ -9,14 +9,14 @@ const ToDoTask = (props) => {
     }
 
     return (
-        <div className={`task ${props.completed 
+        <h3 className={`task ${props.completed 
                                 ? '-completed' 
                                 : ''}`
                         }
-            onClick={toggleComplete}
+            onClick={() => toggleComplete()}
         >
             {props.item}
-        </div>
+        </h3>
     );
 }
 

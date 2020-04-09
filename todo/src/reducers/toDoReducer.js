@@ -12,7 +12,7 @@ export const reducer = (state, action) => {
             return [
                 ...state,
                 {
-                    item: state.payload,
+                    item: action.payload,
                     completed: false,
                     id: Math.random()
                 }

@@ -8,6 +8,7 @@ const ToDoForm = (props) => {
     }
 
     const handleSubmit = event => {
+        console.log('dispatched')
         props.dispatch({
             type: 'ADD_TASK',
             payload: task
@@ -17,12 +18,12 @@ const ToDoForm = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={event => handleSubmit(event)}>
         <label>
           {'Add A Task: '}
-          <input value={task} />
+          <input onChange={event => handleChange(event)} value={task} />
         </label>
-        <input onChange={handleChange} type="submit" />
+    <button type="submit">Add Task</button>
       </form>
     )
 }

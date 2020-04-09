@@ -19,7 +19,9 @@ const ToDoList = (props) => {
                 >
                     Clear Completed Tasks
                 </button>
-                <ToDoForm dispatch={dispatch} />
+            </h2>
+            <div>
+            <ToDoForm dispatch={dispatch} />
                 <ul className='toDoList'>
                     {state.map((task) => {
                         return (
@@ -31,7 +33,7 @@ const ToDoList = (props) => {
                         )
                     })}
                 </ul> 
-            </h2>
+            </div>
         </>
     )
 }
