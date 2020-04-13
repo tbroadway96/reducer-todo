@@ -14,7 +14,7 @@ export const reducer = (state, action) => {
                 {
                     item: action.payload,
                     completed: false,
-                    id: Math.random()
+                    id: Math.random() 
                 }
             ];
         case 'TOGGLE_COMPLETE': 

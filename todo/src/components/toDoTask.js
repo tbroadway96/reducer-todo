@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 
 const ToDoTask = (props) => {
     const toggleComplete = () => {
@@ -16,11 +17,27 @@ const ToDoTask = (props) => {
             onClick={() => toggleComplete()}
         >
             {props.item}
-            <span style={{fontSize: '12px', 
+            
+            {!props.completed
+                ? (
+                    <span style={{fontSize: '12px', 
                           color: '#b3b9c4' 
                         }}>
-                (Click to mark completed)
-            </span>
+                        (Click to mark completed)
+                    </span>
+                ) : 
+                (
+                    <span className='date' 
+                        style={{fontSize: '10px', 
+                                color: '#b3b9c4'
+                               }}
+                    >
+                        Completed On: {moment(Date.now())
+                                       .format('MM/DD/YYYY')
+                        }
+                    </span>
+                )
+            }
         </h3>
     );
 }
