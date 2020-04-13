@@ -1,5 +1,13 @@
+html {
+  background-color: #8fa896;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +43,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  border-radius: 20px;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 16px;
+  background-color: #222623;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: 75px;
+}
+
+.task-completed {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 16px;
+  background-color: #222623;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: 75px;
+  opacity: 60%;
 }

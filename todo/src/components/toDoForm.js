@@ -23,7 +23,7 @@ const ToDoForm = (props) => {
           {'Add A Task: '}
           <input onChange={event => handleChange(event)} value={task} />
         </label>
-    <button type="submit">Add Task</button>
+    <button className='button' type="submit">Add Task</button>
       </form>
     )
 }

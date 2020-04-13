@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
             ];
         case 'TOGGLE_COMPLETE': 
             return state.map((task) => 
-                task.item !== task.payload
+                task.item !== action.payload
                 ? task
                 : {
                     ...task,

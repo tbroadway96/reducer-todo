@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react'
+import React, { useReducer } from 'react'
 import ToDoTask from './toDoTask'
 import ToDoForm from './toDoForm'
 import { 
@@ -15,7 +15,8 @@ const ToDoList = (props) => {
                 {'To Do List\n'}
                 <button onClick={
                     () => dispatch({ type: 'DELETE_COMPLETED' })
-                }
+                    }
+                    className='button'
                 >
                     Clear Completed Tasks
                 </button>
